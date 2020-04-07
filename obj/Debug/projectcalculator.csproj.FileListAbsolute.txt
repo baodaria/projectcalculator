@@ -1,0 +1,9 @@
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\bin\Debug\projectcalculator.exe.config
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\bin\Debug\projectcalculator.exe
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\bin\Debug\projectcalculator.pdb
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.csprojAssemblyReference.cache
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.Form1.resources
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.Properties.Resources.resources
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.csproj.GenerateResource.cache
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.exe
+C:\Users\Home\source\repos\projectcalculator\projectcalculator\obj\Debug\projectcalculator.pdb
