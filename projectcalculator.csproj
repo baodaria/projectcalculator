@@ -50,7 +50,6 @@
     <Compile Include="Actions\Subtract.cs" />
     <Compile Include="Actions\Multiplication.cs" />
     <Compile Include="Actions\Division.cs" />
-    <Compile Include="Actions\Negative.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

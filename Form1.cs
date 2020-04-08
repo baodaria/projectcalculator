@@ -17,6 +17,7 @@ namespace projectcalculator
         ICalc Calc;
         double tmp1;
         double tmp2;
+        bool zapyataya = false;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace projectcalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0"||Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0")
             {
                 Textbox.Text = "";
             }
@@ -41,7 +42,7 @@ namespace projectcalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -50,7 +51,7 @@ namespace projectcalculator
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -59,7 +60,7 @@ namespace projectcalculator
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -68,7 +69,7 @@ namespace projectcalculator
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -77,7 +78,7 @@ namespace projectcalculator
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0")
             {
                 Textbox.Text = "";
             }
@@ -85,7 +86,7 @@ namespace projectcalculator
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -94,7 +95,7 @@ namespace projectcalculator
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -102,7 +103,7 @@ namespace projectcalculator
         }
         private void button9_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0" )
             {
                 Textbox.Text = "";
             }
@@ -110,7 +111,7 @@ namespace projectcalculator
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "0" || Textbox.Text == "00" || Textbox.Text == "000" || Textbox.Text == "0000" || Textbox.Text == "00000" || Textbox.Text == "000000")
+            if (Textbox.Text == "0")
             {
                 Textbox.Text = "";
             }
@@ -136,7 +137,10 @@ namespace projectcalculator
                 }
                 Textbox.Text = "";
                 Calc = new Adder();
+
+                zapyataya = false;
             }
+
         }
 
         private void subtract_click(object sender, EventArgs e)
@@ -154,7 +158,9 @@ namespace projectcalculator
                 }
                 Textbox.Text = "";
                 Calc = new Subtract();
+                zapyataya = false;
             }
+         
         }
 
         private void multiplication_click(object sender, EventArgs e)
@@ -173,7 +179,9 @@ namespace projectcalculator
                 
                       Textbox.Text = "";
                     Calc = new Multiplication();
-                }
+                zapyataya = false;
+            }
+            
         }
 
         private void division_click(object sender, EventArgs e)
@@ -195,14 +203,11 @@ namespace projectcalculator
                 }
                 Textbox.Text = "";
                 Calc = new Division();
-              
-
-
+               zapyataya = false;
 
 
         }
-        
-    
+          
 
 
         private void solution_click(object sender, EventArgs e)
@@ -213,39 +218,43 @@ namespace projectcalculator
             Textbox.Text = Calc.DoMath(tmp1, tmp2)+"";
 
             }
+            zapyataya = false;
         }
 
         private void negative_click(object sender, EventArgs e)
         {
-            if (Textbox.Text == "" && Calc == null)                          
-           {
-           Textbox.Text = "-";
-                    
-           }
-          else
-          {
-               tmp1 = Convert.ToDouble(Textbox.Text);
-                Calc = new Negative();
-
+            if (Textbox.Text == "" )                          
+            {
+              
+                Textbox.Text = "-";    
             }
-                
-               
-            
+
+            else
+            {
+            double current = Convert.ToDouble(Textbox.Text);
+            Textbox.Text = current * (-1) + "";
+            }
 
         }
 
         private void pointforfloat_click(object sender, EventArgs e)
         {
 
-            if (Textbox.Text == "" && Calc == null)
+            if (!zapyataya)
+            {
+                if (Textbox.Text == "" && Calc == null)
             {
                 Textbox.Text = "0,";
             }
-            else
+            else 
             {
                 Addtotextbox(",");
-                
-                
+
+
+                    
+            }
+
+                zapyataya = true;
             }
         }
     }
